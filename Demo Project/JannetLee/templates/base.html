@@ -24,6 +24,30 @@
         height: 100%;
         background: #42455a;
       }
+      .global_search {
+        width: 300px;
+        height: 15px;
+        padding: 20px 20px 20px 20px;
+        margin-left: 200px;
+        border-color: gray;
+        border-width: 1px;
+        border-radius: 5px;
+      }
+      .global_search_button {
+        background-color: lightblue;
+        color: gray;
+        width: 90px;
+        margin-left: 20px;
+        border-color: gray;
+        border-width: 1px;
+        border-radius: 5px;
+        transition: 250ms;
+      }
+      .global_search_button:hover {
+        background-color: lightgray;
+        color: black;
+        transition: 250ms;
+      }
     </style>
     <div class="container">
       <div class="menu">
@@ -33,6 +57,17 @@
           <li>Cybersecurity Best Practices</li>
           <li>About Us</li>
           <li>Future Updates</li>
+          <form class="" method="post" action="{% url 'searchresults' %}">
+            {% csrf_token %}
+            <input
+              class="global_search"
+              type="search"
+              placeholder="Search..."
+              aria-label="Search"
+              name="searched"
+            />
+            <button class="global_search_button" type="submit">Search</button>
+          </form>
         </ul>
       </div>
     </div>
