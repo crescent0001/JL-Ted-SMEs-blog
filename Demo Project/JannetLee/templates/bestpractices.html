@@ -1,0 +1,108 @@
+{% extends 'base.html' %} {% block content %}
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    background: #42455a;
+  }
+
+  .menu ul {
+    display: inline-flex;
+    margin: 50px;
+  }
+
+  .menu ul li {
+    list-style: none;
+    margin: 0 20px;
+    color: b2b1b1;
+    cursor: pointer;
+  }
+
+  .logo img {
+    width: 30px;
+    margin-top: -7px;
+    margin-right: 48px;
+  }
+
+  .active {
+    color: #19dafa !important;
+  }
+
+  .banner {
+    width: 80%;
+    height: 70%;
+    top: 25%;
+    left: 130px;
+    position: absolute;
+    color: black;
+  }
+
+  .app-text {
+    width: 50%;
+    float: left;
+  }
+
+  .app-text h2 {
+    font-size: 43px;
+    width: 640px;
+    position: relative;
+    margin-left: 40px;
+  }
+
+  .app-text p {
+    width: 650px;
+    font-size: 15px;
+    margin: 30px 0 30px 40px;
+    line-height: 25px;
+    color: #919191;
+  }
+
+  .app-picture {
+    width: 50%;
+    float: right;
+  }
+
+  .app-picture img {
+    width: 100%;
+    margin-top: -20px;
+    padding-left: 50px;
+  }
+
+  .app-text h2 {
+    width: 640px;
+    position: relative;
+    margin-left: 40px;
+  }
+
+  .app-text a {
+    width: 650px;
+    font-size: 15px;
+    margin: 30px 0 30px 40px;
+    line-height: 25px;
+    color: #919191;
+  }
+</style>
+
+<div class="container">
+  <div class="banner">
+    <div class="app-text">
+      <h2>List of Attacks</h2>
+      <h3>*year*</h3>
+      <img src="x" alt="image for other articles" />
+      <a href="x">some article description ..(new tab to the article)</a>
+      <img src="x" alt="image for other articles" />
+      <a href="x">some article description ..(new tab to the article)</a>
+      <img src="x" alt="image for other articles" />
+      <a href="x">some article description ..(new tab to the article)</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

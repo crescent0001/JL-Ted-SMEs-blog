@@ -1,0 +1,158 @@
+{% extends 'base.html' %} {% block content %}
+
+<body>
+  <style>
+    .menu ul {
+      display: inline-flex;
+      margin: 50px;
+    }
+
+    .menu ul li {
+      list-style: none;
+      margin: 0 20px;
+      color: b2b1b1;
+      cursor: pointer;
+    }
+
+    .logo img {
+      width: 30px;
+      margin-top: -7px;
+      margin-right: 48px;
+    }
+
+    .active {
+      color: #19dafa !important;
+    }
+
+    .banner {
+      width: 80%;
+      height: 70%;
+      top: 25%;
+      left: 130px;
+      position: absolute;
+      color: black;
+    }
+
+    .app-text {
+      width: 50%;
+      float: left;
+    }
+
+    .app-text h1 {
+      font-size: 43px;
+      width: 640px;
+      position: relative;
+      margin-left: 40px;
+    }
+
+    .app-text p {
+      width: 650px;
+      font-size: 15px;
+      margin: 30px 0 30px 40px;
+      line-height: 25px;
+      color: #919191;
+    }
+
+    .app-picture {
+      width: 50%;
+      float: right;
+    }
+
+    .app-picture img {
+      width: 100%;
+      margin-top: -20px;
+      padding-left: 50px;
+    }
+
+    .app-text h2 {
+      font-size: 43px;
+      width: 640px;
+      position: relative;
+      margin-left: 40px;
+    }
+
+    .app-text a {
+      width: 650px;
+      font-size: 15px;
+      margin: 30px 0 30px 40px;
+      line-height: 25px;
+      color: #919191;
+    }
+
+    form {
+      width: 500px;
+      margin: 8% auto;
+      padding: 50px 0;
+      text-align: center;
+      box-shadow: 0 20px 40px rgb(0, 0, 0);
+    }
+
+    .input-box {
+      margin: 30px auto;
+      width: 80%;
+      position: relative;
+      box-shadow: 0 8px 10px rgb(0, 0, 0);
+    }
+
+    .input-box input {
+      width: 100%;
+      height: 40px;
+      border: none;
+      background: #efefef;
+      padding-left: 50px;
+    }
+
+    button {
+      width: 130px;
+      height: 40px;
+      margin-left: 10%;
+      display: block;
+      border: 0;
+      font-size: 16px;
+      outline: none;
+      background: linear-gradient(to right, #4caf50, #00bcd4);
+      box-shadow: 0 8px 10px rgb(0, 0, 0);
+      cursor: pointer;
+    }
+  </style>
+  <div class="container">
+    <div class="banner">
+      <div class="app-text">
+        <h2>About Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis rem
+          eos ratione tempora, repudiandae quae facilis quaerat fugit ipsum
+          aperiam dolor, veritatis perferendis id! Omnis fuga accusantium odio
+          soluta sunt nesciunt incidunt perferendis corrupti sit facere repellat
+          voluptatum laboriosam enim maxime laborum ullam amet quae ex, ab
+          deleniti commodi quasi repudiandae! Laudantium dolorum voluptatem
+          reprehenderit maiores deleniti a quasi cupiditate! Nostrum sequi
+          reiciendis dolorum nihil debitis! Odit aliquid odio eligendi deserunt
+          commodi, vel pariatur beatae ea in eius? Nostrum id repellat ullam
+          laborum vitae voluptatem hic quidem tempore veritatis laboriosam
+          recusandae exercitationem necessitatibus voluptatibus perferendis eius
+          atque, odit modi fugiat.
+        </p>
+        <form>
+          <div class="input-box">
+            <input type="text" placeholder="name" required />
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="phone" />
+          </div>
+          <div class="input-box">
+            <input type="email" placeholder="email" required />
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="type of enquiry" required />
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="leave your message" required />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

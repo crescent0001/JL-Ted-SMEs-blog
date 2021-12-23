@@ -1,0 +1,105 @@
+{% extends 'base.html' %} {% block content %}
+
+<body>
+  <style>
+    .menu ul {
+      display: inline-flex;
+      margin: 50px;
+    }
+
+    .menu ul li {
+      list-style: none;
+      margin: 0 20px;
+      color: b2b1b1;
+      cursor: pointer;
+    }
+
+    .logo img {
+      width: 30px;
+      margin-top: -7px;
+      margin-right: 48px;
+    }
+
+    .active {
+      color: #19dafa !important;
+    }
+
+    .banner {
+      width: 80%;
+      height: 70%;
+      top: 25%;
+      left: 130px;
+      position: absolute;
+      color: black;
+    }
+
+    .app-text {
+      width: 50%;
+      float: left;
+    }
+
+    .app-text h1 {
+      font-size: 43px;
+      width: 640px;
+      position: relative;
+      margin-left: 40px;
+    }
+
+    .app-text p {
+      width: 650px;
+      font-size: 15px;
+      margin: 30px 0 30px 40px;
+      line-height: 25px;
+      color: #919191;
+    }
+
+    .app-picture {
+      width: 50%;
+      float: right;
+    }
+
+    .app-picture img {
+      width: 100%;
+      margin-top: -20px;
+      padding-left: 50px;
+    }
+
+    .app-text h2 {
+      font-size: 43px;
+      width: 640px;
+      position: relative;
+      margin-left: 40px;
+    }
+
+    .app-text a {
+      width: 650px;
+      font-size: 15px;
+      margin: 30px 0 30px 40px;
+      line-height: 25px;
+      color: #919191;
+    }
+  </style>
+  <div class="container">
+    <div class="banner">
+      <div class="app-text">
+        <h2>Future Updates</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure earum,
+          aperiam omnis quam quidem quos sunt. Nam, numquam! Ipsum sit quo
+          eligendi qui placeat explicabo.<br />Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Ratione inventore adipisci, natus aut
+          harum quasi expedita enim veritatis ad iste, impedit, maxime molestiae
+          officia nostrum!<br />Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Nam dolorum fugit dolor vel quidem unde rerum
+          architecto sunt? Minus, ipsa? Dolorem eligendi animi commodi
+          sapiente.<br />Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nam dolorum fugit dolor vel quidem unde rerum architecto sunt?
+          Minus, ipsa? Dolorem eligendi animi commodi sapiente.
+        </p>
+        <p><b>Like what we do? Support us -><a href="x">here.</a></b></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+{% endblock %}
