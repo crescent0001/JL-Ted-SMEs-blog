@@ -57,7 +57,7 @@
           <li>Cybersecurity Best Practices</li>
           <li>About Us</li>
           <li>Future Updates</li>
-          <form class="" method="post" action="{% url 'searchresults' %}">
+          <form class="" method="POST" action="{% url 'searchresults' %}">
             {% csrf_token %}
             <input
               class="global_search"
