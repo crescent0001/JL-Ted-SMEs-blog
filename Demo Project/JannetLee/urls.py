@@ -6,5 +6,6 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('searchresults', views.searchresults, name='searchresults'),
     # path('', HomeView.as_view(), name='home'),
-    path('contactus.html', views.contact, name="contact"),
+    path('contactus.html', views.contact, name="contactus"),
+    
 ]

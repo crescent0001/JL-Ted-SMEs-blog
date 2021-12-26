@@ -7,23 +7,23 @@ from django.conf import settings
 def home(request):
     return render(request, 'contactus.html', {})
 
-def contact(request):
+def contact(request,):
     if request.method == "POST":
-        name = request.POST['name']
-        email = request.POST['email']
-        phone = request.POST['phone']
+        message_name = request.POST['message-name']
+        Your_email = request.POST['email']
+        Your_phone = request.POST['phone']
         Enquiry = request.POST['Enquiry']
         message = request.POST['message']
 
-        # sned an email 
+        # send an email 
         send_mail(
-            'name', # subject 
-            'message', # message 
-            'email', # from email 
+            message_name, # subject 
+            message, # message 
+            Your_email, # from email 
             ['jianyi2021@gmail.com'], # to Email
         )
 
-        return render(request, 'contactus.html', {'name' : name })
+        return render(request, 'contactus.html', {'message_name' : message_name })
 
     else:
         return render(request, 'contactus.html', {})
