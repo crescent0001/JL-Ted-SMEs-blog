@@ -1,9 +1,15 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-# from .models import Post
+from .models import Post
 
 def home(request):
-    return render(request, 'index.html', {})
+    return render(request, 'contactus.html', {})
+
+def contact(request):
+    # contact = Post.objects.all()
+    # return render(request, 'template/aboutus.html', {'aboutus' : aboutus })
+    return render(request, 'contactus.html', {})
+
 
 def searchresults(request): #https://www.youtube.com/watch?v=AGtae4L5BbI, to be continued (09:44)
     if request.method == "POST":
