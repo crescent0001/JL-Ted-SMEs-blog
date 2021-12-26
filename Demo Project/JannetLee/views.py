@@ -3,7 +3,7 @@ from django.views.generic import ListView, DetailView
 # from .models import Post
 
 def home(request):
-    return render(request, 'bestpractices.html', {})
+    return render(request, 'index.html', {})
 
 def searchresults(request): #https://www.youtube.com/watch?v=AGtae4L5BbI, to be continued (09:44)
     if request.method == "POST":
