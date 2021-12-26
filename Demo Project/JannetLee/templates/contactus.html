@@ -1,6 +1,6 @@
 
-{% extends 'base.html' %} {% block content %}
-  
+
+
 {% load static %}  
 
 
@@ -24,10 +24,33 @@
 
     <title>Contact Form #7</title>
   </head>
-
-  
   <body>
-    
+
+
+  </style>
+  <div class="container">
+    <div class="menu">
+      <ul>
+        <li class="logo"><img src="x" alt="logo image" /></li>
+        <li class="active">Home</li>
+        <li>Cybersecurity Best Practices</li>
+        <li>About Us</li>
+        <li>Future Updates</li>
+        <form class="" method="POST" action="{% url 'searchresults' %}">
+          {% csrf_token %}
+          <input
+            class="global_search"
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+            name="searched"
+          />
+          <button class="global_search_button" type="submit">Search</button>
+        </form>
+      </ul>
+    </div>
+  </div>
+  
   
 
   <div class="content">
@@ -116,4 +139,3 @@
 
   </body>
 </html>
-{% endblock %}
