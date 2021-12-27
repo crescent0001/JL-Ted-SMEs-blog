@@ -7,28 +7,26 @@ from django.conf import settings
 def home(request):
     return render(request, 'contactus.html', {})
 
-def contact(request,):
-    if request.method == "POST":
-        message_name = request.POST['message-name']
-        Your_email = request.POST['email']
-        Your_phone = request.POST['phone']
-        Enquiry = request.POST['Enquiry']
-        message = request.POST['message']
-
-        # send an email 
-        send_mail(
-            message_name, # subject 
-            message, # message 
-            Your_email, # from email 
-            ['jianyi2021@gmail.com'], # to Email
-        )
-
-        return render(request, 'contactus.html', {'message_name' : message_name })
-
+def contact(request):
+    mapbox_access_token = 'pk.my_mapbox_access_token'
+    if request.method == 'GET':
+        form = ContactForm()
     else:
-        return render(request, 'contactus.html', {})
-    # contact = Post.objects.all()
-    # return render(request, 'template/aboutus.html', {'aboutus' : aboutus })
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            sender_name = form.cleaned_data['name']
+            emailFrom = form.cleaned_data['email']
+            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
+
+
+            form.save()
+            try:
+                send_mail('New Enquiry', message, emailFrom, ['va.glazing@gmail.com'],fail_silently=False, )
+            except BadHeaderError:
+                return HttpResponse('Invalid header found')
+        return redirect('success')
+
+    return render(request, "contact.html",{'form': form})
     
 
 
