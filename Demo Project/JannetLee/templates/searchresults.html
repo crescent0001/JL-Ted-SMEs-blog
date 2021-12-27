@@ -82,7 +82,9 @@
 <center>
   {% if searched %}
   <h1>Search results for {{ searched }}</h1>
-  {% else %}
+  <br />
+  {% for article in articles %} {{article }} <br />
+  {% endfor %} {% else %}
   <h1>Field empty</h1>
   {% endif %}
 </center>

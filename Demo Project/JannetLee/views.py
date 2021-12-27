@@ -32,10 +32,12 @@ def contact(request):
     
 
 
-def searchresults(request): #https://www.youtube.com/watch?v=AGtae4L5BbI, to be continued (09:44)
+def searchresults(request): #https://www.youtube.com/watch?v=AGtae4L5BbI, to be continued (13:46)
     if request.method == "POST":
-        searched = request.POST["searched"]
-        return render(request, 'searchresults.html', {"searched":searched})
+        searched = request.POST["searched"] # if user has inputed, return the input
+        articles = Post.objects.filter(title__contains=searched)
+
+        return render(request, 'searchresults.html', {"searched":searched, "articles":articles})
     else:
         return render(request, 'searchresults.html', {})
 
