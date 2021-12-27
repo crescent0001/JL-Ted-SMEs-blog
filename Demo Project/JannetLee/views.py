@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 def home(request):
-    return render(request, 'contactus.html', {})
+    return render(request, 'index.html', {})
 
 def contact(request):
     mapbox_access_token = 'pk.my_mapbox_access_token'
