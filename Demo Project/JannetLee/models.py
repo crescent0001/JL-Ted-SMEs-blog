@@ -25,3 +25,25 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
+
+class Contact(models.Model):
+    name = models.CharField('name', max_length=20)
+    email = models.EmailField('email', max_length=20)
+    message = models.TextField('message', max_length=125)
+    mobile = models.CharField('phone', max_length=20)
+
+    def __str__(self):
+        return self.name
+
+class Enquiry(models.Model):
+    name = models.CharField('name', max_length=20)
+    email = models.EmailField('email', max_length=20)
+    message = models.TextField('message', max_length=255)
+    mobile = models.CharField('phone', max_length=20)
+    Type_of_Enquiry = models.TextField('Type_of_Enquiry', max_length=25)
+
+    def __str__(self):
+        return self.name 
+
+
+

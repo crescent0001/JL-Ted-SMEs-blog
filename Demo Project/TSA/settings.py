@@ -128,11 +128,11 @@ STATICFILES_DIRS = [
 # myaccout.google.com/DisplayUnlockCaptcha
 # myaccout.google.com/apppasswords
 # Email Settings
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackens'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jianyi2021@gmail.com'
-EMAIL_HOST_PASSWORD = 'mkqxcidtgqyruhtl'
-EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = 'kocBa4-qypbud-hujrij'
+EMAIL_USE_TLS = True 
 EMAIL_USE_SSL = False
 
