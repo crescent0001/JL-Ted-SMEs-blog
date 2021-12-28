@@ -15,12 +15,12 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, max_length=32, blank=True, null=True)
     post_date = models.DateField(auto_now_add=True)
     body = models.TextField()
     image = models.ImageField(upload_to='uploads/articles/')
-    category = models.CharField(max_length=255, default="uncategorized")
-    attack_year = models.IntegerField(('year'), choices=YEAR_CHOICES, default=datetime.datetime.now().year, blank=True, null=True)
+    attack_year = models.IntegerField(('Year of Attack'), choices=YEAR_CHOICES, default=datetime.datetime.now().year, blank=True, null=True)
     
 
     def __str__(self):
