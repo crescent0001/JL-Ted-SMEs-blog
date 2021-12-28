@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import HomeView, ArticlePage
+from .views import HomeView, ArticlePage, all_contact
 
 urlpatterns = [
     
@@ -8,7 +8,7 @@ urlpatterns = [
     path('searchresults', views.searchresults, name='searchresults'),
     path('', HomeView.as_view(), name='home'),
 
-    path('contactus.html', views.contact, name="contactus"),
+    path('contactuc.html', views.Contact, name="contactus"),
     path('article/<int:pk>', ArticlePage.as_view(), name='articlepage')
     
 ]
