@@ -5,3 +5,5 @@ admin.site.register(Post)
 admin.site.register(Category)
 admin.site.register(Enquiry)
 admin.site.register(MyUser)
+
+

@@ -27,30 +27,32 @@ class Post(models.Model):
         return self.title + ' | ' + str(self.author)
 
 class Contact(models.Model):
-    name = models.CharField('name', max_length=20)
-    email = models.EmailField('email', max_length=20)
-    message = models.TextField('message', max_length=125)
+    name = models.CharField('name', max_length=30)
+    email = models.EmailField('email', max_length=30)
+    message = models.TextField('message', max_length=255)
     mobile = models.CharField('phone', max_length=20)
-    Type_of_Enquiry = models.TextField('Type_of_Enquiry', max_length=25, blank=True, null=True)
+    Type_of_Enquiry = models.TextField('Type_of_Enquiry', max_length=55, blank=True, null=True)
 
     def __str__(self):
         return self.name
 
 class MyUser(models.Model):
-    first_name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=20)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
     email = models.EmailField('User Email')
+    mobile = models.CharField('phone', max_length=20, blank=True, null=True)
+
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name
 
 class Enquiry(models.Model):
-    name = models.CharField('name', max_length=20)
-    email = models.EmailField('email', max_length=20)
-    message = models.TextField('message', max_length=125)
+    name = models.CharField('name', max_length=30)
+    email = models.EmailField('email', max_length=30)
     mobile = models.CharField('phone', max_length=20)
-    Type_of_Enquiry = models.TextField('Type_of_Enquiry', max_length=25, blank=True, null=True)
-    attendees = models.ManyToManyField(MyUser, blank=True)
+    Type_of_Enquiry = models.TextField('Type_of_Enquiry', max_length=55, blank=True, null=True)
+    message = models.TextField('message', max_length=255)
+    attendees = models.ManyToManyField(MyUser, blank=True, null=True)
 
     def __str__(self):
         return self.name 
