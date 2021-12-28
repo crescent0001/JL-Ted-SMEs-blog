@@ -4,8 +4,8 @@ from .models import Post
 from django.core.mail import send_mail
 from django.conf import settings
 
-def home(request):
-    return render(request, 'index.html', {})
+# def home(request):
+#     return render(request, 'bestpractices.html', {})
 
 def contact(request):
     mapbox_access_token = 'pk.my_mapbox_access_token'
@@ -39,7 +39,11 @@ def searchresults(request): #https://www.youtube.com/watch?v=AGtae4L5BbI, to be 
     else:
         return render(request, 'searchresults.html', {})
 
-# class HomeView(ListView):
-#     model = Post
-#     template_name = 'home.html'
+class HomeView(ListView):
+    model = Post
+    template_name = 'bestpractices.html'
+
+class ArticlePage(DetailView):
+    model = Post
+    template_name = 'articlepage.html'
     

@@ -92,21 +92,10 @@
 <div class="container">
   <div class="banner">
     <div class="app-text">
-      <h2><center>Article Title</center></h2>
+      <h2><center>{{ post.title }}</center></h2>
       <center><img src="x" alt="article image" /></center>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet atque
-        sit earum tempore reiciendis cupiditate, est similique nam asperiores ea
-        culpa cum quis placeat corporis nihil fugiat odit impedit voluptate?
-        Quis animi, sint fugiat dolorem culpa expedita a, sunt vero voluptates
-        necessitatibus quo cum fugit dolor vitae eligendi. Eos fugiat mollitia
-        repellendus nemo dolorum doloremque. Perferendis eius nostrum,
-        asperiores dignissimos ab quia, tempora qui velit numquam nihil possimus
-        hic odit, laboriosam unde. Reiciendis, est? Veritatis perferendis
-        deleniti mollitia, officiis adipisci sint recusandae est officia nobis
-        deserunt hic doloribus molestiae repellat. Corporis nulla facilis
-        accusamus sapiente totam velit ducimus! Blanditiis, enim.
-      </p>
+      <small>By: {{ post.author }} - {{ post.post_date }}</small>
+      <p>{{ post.body }}</p>
     </div>
   </div>
 </div>

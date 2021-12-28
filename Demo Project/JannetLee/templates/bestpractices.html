@@ -93,8 +93,22 @@
 <div class="container">
   <div class="banner">
     <div class="app-text">
+      <h2>Best Practices</h2>
+      <ul>
+        {% for post in object_list %}
+        <li>
+          <img src="{{post.image}}" alt="article image" /> -
+          <a href="{% url 'articlepage' post.pk %}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <img src="x" alt="image for other articles" />
+      <a href="x">some article description ..(new tab to the article)</a>
+      <img src="x" alt="image for other articles" />
+      <a href="x">some article description ..(new tab to the article)</a>
+      <img src="x" alt="image for other articles" />
+      <a href="x">some article description ..(new tab to the article)</a>
       <h2>List of Attacks</h2>
-      <h3>*year*</h3>
       <img src="x" alt="image for other articles" />
       <a href="x">some article description ..(new tab to the article)</a>
       <img src="x" alt="image for other articles" />
