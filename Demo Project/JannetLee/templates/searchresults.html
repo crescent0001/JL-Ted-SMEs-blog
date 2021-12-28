@@ -83,7 +83,8 @@
   {% if searched %}
   <h1>Search results for {{ searched }}</h1>
   <br />
-  {% for article in articles %} {{article }} <br />
+  {% for article in articles %}
+  <a href="{% url 'articlepage' article.pk %}">{{ article }}</a><br />
   {% endfor %} {% else %}
   <h1>Field empty</h1>
   {% endif %}
