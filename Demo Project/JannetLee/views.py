@@ -1,11 +1,27 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import Post
+from .models import Post, Contact
+from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 from django.conf import settings
+from .forms import ContactForm
 
 # def home(request):
 #     return render(request, 'bestpractices.html', {})
+def all_contact(request):
+    submitted = False
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/contactus?submitted=True')
+
+    else: 
+        form = ContactForm
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'enquirylist.html', 
+            {'form' : form, 'submitted': submitted})
 
 def contact(request):
     mapbox_access_token = 'pk.my_mapbox_access_token'
@@ -26,7 +42,7 @@ def contact(request):
                 return HttpResponse('Invalid header found')
         return redirect('success')
 
-    return render(request, "contact.html",{'form': form})
+    return render(request, "contactus.html",{'form': form})
     
 
 

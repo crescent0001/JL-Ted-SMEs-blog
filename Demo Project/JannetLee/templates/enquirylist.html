@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <center>
+    <h1>Enquiry</h1>
+
+     <ul>
+
+    <h2>Add Enquiry To Database</h2>        
+
+    </ul>
+    <br/><br/>
+    {% if submitted %}
+        Your Feedback has been Submitted 
+        Succefully!!!
+
+    {% else %}
+
+        <form action="" method=POST>
+            {% csrf_token %}
+
+            {{ form.as_p }}
+        
+            <button type="submit" 
+            class="btn btn-success">Submit</button>
+        </form>
+
+    {% endif %}
+
+    
+    </center>
+
+{% endblock %}
