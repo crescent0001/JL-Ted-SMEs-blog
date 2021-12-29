@@ -3,12 +3,11 @@ from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.base import TemplateView
 from .models import Post, Contact
 from django.http import HttpResponseRedirect
-from django.core.mail import send_mail
 from django.conf import settings
 from .forms import ContactForm
 
 def home(request):
-    return render(request, 'index.html', {})
+    return render(request, 'contactus.html', {})
 
 
 def all_contact(request):
@@ -54,5 +53,13 @@ class FutureUpdates(TemplateView):
     template_name = 'futureupdates.html' 
 
 class IndexView(TemplateView):
+    model = Post
+    template_name = 'index.html' 
+    
+class contactupdate(TemplateView):
+    model = Post
+    template_name = 'contactus.html' 
+
+class Homepage(TemplateView):
     model = Post
     template_name = 'index.html' 
