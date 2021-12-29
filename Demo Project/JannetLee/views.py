@@ -1,13 +1,16 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic.base import TemplateView
 from .models import Post, Contact
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 from django.conf import settings
 from .forms import ContactForm
 
-# def home(request):
-#     return render(request, 'bestpractices.html', {})
+def home(request):
+    return render(request, 'index.html', {})
+
+
 def all_contact(request):
     submitted = False
     if request.method == "POST":
@@ -36,9 +39,20 @@ def searchresults(request): #https://www.youtube.com/watch?v=AGtae4L5BbI, to be 
 
 class HomeView(ListView):
     model = Post
-    template_name = 'about.html'
+    template_name = 'bestpractices.html'
 
 class ArticlePage(DetailView):
     model = Post
     template_name = 'articlepage.html'
-    
+
+class AboutPageView(TemplateView):
+    model = Post
+    template_name = 'about.html'
+
+class FutureUpdates(TemplateView):
+    model = Post
+    template_name = 'futureupdates.html' 
+
+class IndexView(TemplateView):
+    model = Post
+    template_name = 'index.html' 
