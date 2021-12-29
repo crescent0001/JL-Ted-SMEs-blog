@@ -50,6 +50,7 @@
   }
 
   .app-text h2 {
+    font-size: 43px;
     width: 640px;
     position: relative;
     margin-left: 40px;
@@ -92,16 +93,6 @@
 <div class="container">
   <div class="banner">
     <div class="app-text">
-      <ul>
-        <li><link rel="stylesheet" href="style.css" /></li>
-        <li class="logo" ><img src="x" alt="logo image" /></li>
-        {% csrf_token %}
-        <li class="active" method="get"><a href="index.html">Home </a></li>
-        <li><a href="bestpractices.html">Best Practices </a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="futureupdates.html">Future Updates</a></li>
-        </ul>
-  
       <h2><center>{{ post.title }}</center></h2>
       <center><img src="x" alt="article image" /></center>
       <small>By: {{ post.author }} - {{ post.post_date }}</small>

@@ -10,6 +10,6 @@ urlpatterns = [
     path('bestpractices.html', views.HomeView.as_view(), name='Best Practices'),
     path('futureupdates.html', views.FutureUpdates.as_view(), name='Future Updates'),
     # path('contactuc.html', views.Contact, name="contactus"),
-    # path('article/<int:pk>', ArticlePage.as_view(), name='articlepage')
+    path('article/<int:pk>', ArticlePage.as_view(), name='articlepage')
 
 ]
