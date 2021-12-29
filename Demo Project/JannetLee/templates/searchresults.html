@@ -77,17 +77,55 @@
     line-height: 25px;
     color: #919191;
   }
+
+  .search-header-primary {
+    margin-top: 75px;
+    margin-left: 90px;
+    margin-bottom: 10px;
+    font-family: Arial;
+    font-size: 40px;
+  }
+
+  .search-header-secondary {
+    margin-top: 13px;
+    margin-left: 90px;
+    margin-bottom: 10px;
+    font-family: Arial;
+    font-size: 30px;
+  }
+
+  .article-content {
+    margin-left: 90px;
+    margin-top: 100px;
+    font-family: monospace;
+    font-size: 20px;
+    width: 300px;
+    height: 15px;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .article-thumbnail {
+    margin-right: 75px;
+  }
 </style>
 
-<center>
+<body>
   {% if searched %}
-  <h1>Search results for {{ searched }}</h1>
+  <h1 class="search-header-primary">Search results for "{{ searched }}"</h1>
+  <br />
+  <h2 class="search-header-secondary">Articles</h2>
   <br />
   {% for article in articles %}
-  <a href="{% url 'articlepage' article.pk %}">{{ article }}</a><br />
+  <a class="article-content" href="{% url 'articlepage' article.pk %}">
+    <img class="article-thumbnail" src="#" alt="article_image" />
+    <div>|| {{ article }} ||</div>
+  </a>
+  <br />
   {% endfor %} {% else %}
-  <h1>Field empty</h1>
+  <h1 class="search-header-primary">
+    No results. Try to use a different keyword or return to home page.
+  </h1>
   {% endif %}
-</center>
+</body>
 
 {% endblock %}

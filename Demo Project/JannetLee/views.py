@@ -36,7 +36,7 @@ def searchresults(request): #https://www.youtube.com/watch?v=AGtae4L5BbI, to be 
 
 class HomeView(ListView):
     model = Post
-    template_name = 'about.html'
+    template_name = 'bestpractices.html'
 
 class ArticlePage(DetailView):
     model = Post
