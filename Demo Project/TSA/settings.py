@@ -120,9 +120,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+MEDIA_ROOT =  BASE_DIR
+MEDIA_URL = '/uploads/articles/'
 
 # myaccout.google.com/lesssecureapps
 # myaccout.google.com/DisplayUnlockCaptcha
