@@ -97,7 +97,7 @@
       <ul>
         {% for post in object_list %}
         <li>
-          <img src="{{post.image}}" alt="article image" /> -
+          <img src="{{post.image.url}}" alt="article image" /> -
           <a href="{% url 'articlepage' post.pk %}">{{ post.title }}</a>
         </li>
         {% endfor %}
