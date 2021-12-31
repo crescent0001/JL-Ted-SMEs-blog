@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %} {% load static %}
 
 <body>
   <style>
@@ -83,7 +83,7 @@
       <div class="app-text">
         <h1>Jannet Lee Ted Security Association Pvt Ltd<br />Introduction</h1>
         <div class="app-picture">
-          <img src="x" alt="app-picture-intro" />
+          <img src="x" alt="app-picture-intro"/>
         </div>
         <p>
           Cyber-attacks have been quite prevalent in these past few years, and the increase in computing speeds has enabled cyber criminals to commit greater crimes in larger scales. Therefore, it is paramount for organizations with no specialized security team, to mitigate these risks, to be proactive in searching for hidden threats, and to react appropriately. </br></br>
@@ -93,7 +93,7 @@
 
         
         <div class="app-picture">
-          <img src="x" alt="app-picture-main-article" />
+          <img src="{% static 'JannetLee/images/top3attacks.jpg' %}" alt="app-picture-main-article" width="600" height="500" />
         </div>
         <h2>What are these threats?</h2>
         <h3><u>Malware</u></h3>
@@ -185,12 +185,15 @@
         </p>
         <p></p>
         <h2>Other Articles</h2>
-        <img src="x" alt="image for other articles" />
-        <a href="x">some article description ..(link in best practices page)</a>
-        <img src="x" alt="image for other articles" />
-        <a href="x">some article description ..(link in best practices page)</a>
-        <img src="x" alt="image for other articles" />
-        <a href="x">some article description ..(link in best practices page)</a>
+        <li>
+        <img src="{% static 'JannetLee/images/Marriott_.png' %}" alt="image for other articles" width="100" height="100" /> - <a href="bestpractices.html">Marriott Data breach</a>
+        </li>
+        <li>
+        <img src="{% static 'JannetLee/images/TollGroup.png' %}" alt="image for other articles" width="100" height="100" /> - <a href="bestpractices.html">Toll Group Ransomware Attacks</a>
+        </li>
+        <li>
+        <img src="{% static 'JannetLee/images/istockphoto-845470768-612x612.jpg' %}" alt="image for other articles" width="100" height="100" /> - <a href="bestpractices.html">Sopra Steria Ransomware</a>
+        </li>
       </div>
     </div>
   </div>

@@ -93,33 +93,15 @@
 <div class="container">
   <div class="banner">
     <div class="app-text">
-      <h2>Best Practices</h2>
+      <h2>Articles</h2>
       <ul>
         {% for post in object_list %}
         <li>
-<<<<<<< Updated upstream
           <img src="{{post.image.url}}" alt="article image" width="100" height="100" /> -
-=======
-          <img src="{{post.image}}" alt="article image" />
-          -
->>>>>>> Stashed changes
           <a href="{% url 'articlepage' post.pk %}">{{ post.title }}</a>
         </li>
         {% endfor %}
       </ul>
-      <img src="x" alt="image for other articles" />
-      <a href="x">some article description ..(new tab to the article)</a>
-      <img src="x" alt="image for other articles" />
-      <a href="x">some article description ..(new tab to the article)</a>
-      <img src="x" alt="image for other articles" />
-      <a href="x">some article description ..(new tab to the article)</a>
-      <h2>List of Attacks</h2>
-      <img src="x" alt="image for other articles" />
-      <a href="x">some article description ..(new tab to the article)</a>
-      <img src="x" alt="image for other articles" />
-      <a href="x">some article description ..(new tab to the article)</a>
-      <img src="x" alt="image for other articles" />
-      <a href="x">some article description ..(new tab to the article)</a>
     </div>
   </div>
 </div>
