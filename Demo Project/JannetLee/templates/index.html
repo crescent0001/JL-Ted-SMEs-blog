@@ -35,7 +35,7 @@
 
     .app-text {
       width: 50%;
-      float: left;
+      float: none;
     }
 
     .app-text h1 {
@@ -54,8 +54,8 @@
     }
 
     .app-picture {
-      width: 50%;
-      float: right;
+      width: 100%;
+      float: left;
     }
 
     .app-picture img {
@@ -70,6 +70,12 @@
       margin-left: 40px;
     }
 
+    .app-text h3{
+      width: 640px;
+      position: relative;
+      margin-left: 40px;
+    }
+
     .app-text a {
       width: 650px;
       font-size: 15px;
@@ -77,14 +83,43 @@
       line-height: 25px;
       color: #919191;
     }
+
+    .card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    text-align: left;
+    padding: 2em;
+    border-radius: 0px;
+    }
+
+    .card ul{
+      list-style-type: none;
+    }
   </style>
   <div class="container">
     <div class="banner">
       <div class="app-text">
         <h1>Jannet Lee Ted Security Association Pvt Ltd<br />Introduction</h1>
+        <br>
+        <br>
         <div class="app-picture">
-          <img src="{% static 'JannetLee/images/mainpage.png' %}" alt="image for other articles" width="100" height="100" />
+          <img src="{% static 'JannetLee/images/mainpage.png' %}"  alt="image for other articles" width="300px" height="260px" />
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <p>
           Cyber-attacks have been quite prevalent in these past few years, and the increase in computing speeds has enabled cyber criminals to commit greater crimes in larger scales. Therefore, it is paramount for organizations with no specialized security team, to mitigate these risks, to be proactive in searching for hidden threats, and to react appropriately. </br></br>
           Statistically, an incident can cost an organization, on average, about USD 4,240,000 as of 2021 (Lohrmann, 2021). Furthermore, cyber-criminals are launching attacks worldwide on average, about 2,200 attacks daily (Norton, 2021). Therefore, small businesses need to protect their networks and assets as best they can to prevent or mitigate these attacks, as a successful attack on an organization has a great impact on their reputation and financial stability.</br></br>
@@ -95,7 +130,34 @@
         <div class="app-picture">
           <img src="{% static 'JannetLee/images/top3attacks.jpg' %}" alt="app-picture-main-article" width="600" height="500" />
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <h2>What are these threats?</h2>
+        <br>
         <h3><u>Malware</u></h3>
         <p>
           Malware includes multiple other threats, summon ones include threats
@@ -185,18 +247,26 @@
         </p>
         <p></p>
         <h2>Other Articles</h2>
-        <li>
-        <img src="{% static 'JannetLee/images/Marriott_.png' %}" alt="image for other articles" width="100" height="100" /> - <a href="bestpractices.html">Marriott Data breach</a>
-        </li>
-        <li>
-        <img src="{% static 'JannetLee/images/TollGroup.png' %}" alt="image for other articles" width="100" height="100" /> - <a href="bestpractices.html">Toll Group Ransomware Attacks</a>
-        </li>
-        <li>
-        <img src="{% static 'JannetLee/images/istockphoto-845470768-612x612.jpg' %}" alt="image for other articles" width="100" height="100" /> - <a href="bestpractices.html">Sopra Steria Ransomware</a>
-        </li>
+        <div class= "card">
+          <ul>
+            <li>
+            <img src="{% static 'JannetLee/images/Marriott_.png' %}" alt="image for other articles" width="100" height="100" /> - <a href="bestpractices.html">Marriott Data breach</a>
+            </li>
+            <li>
+            <img src="{% static 'JannetLee/images/TollGroup.png' %}" alt="image for other articles" width="100" height="100" /> - <a href="bestpractices.html">Toll Group Ransomware Attacks</a>
+            </li>
+            <li>
+            <img src="{% static 'JannetLee/images/istockphoto-845470768-612x612.jpg' %}" alt="image for other articles" width="100" height="100" /> - <a href="bestpractices.html">Sopra Steria Ransomware</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
 </body>
 
 {% include 'footer.html' %}
