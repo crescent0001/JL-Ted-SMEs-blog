@@ -32,7 +32,6 @@
         border-color: gray;
         border-width: 1px;
         border-radius: 5px;
-        display: inline-flex;
       }
       .global_search_button {
         background-color: lightblue;
@@ -67,7 +66,7 @@
           <li><a href="about.html">About Us</a></li>            
           <li><a href="futureupdates.html">Future Updates</a></li>
         </ul>
-          <form class="" method="POST" action="{% url 'searchresults' %}">
+      
             {% csrf_token %}
             <input
               class="global_search"
