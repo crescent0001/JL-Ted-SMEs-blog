@@ -7,7 +7,7 @@ from .views import HomeView, ArticlePage, all_contact, IndexView, AboutPageView,
 urlpatterns = [
     
     path('', IndexView.as_view(), name="home"),
-    path('searchresults', views.searchresults, name='searchresults'),
+    # path('searchresults', views.searchresults, name='searchresults'),
     path('about.html', views.AboutPageView.as_view(), name='About Us'),
     path('bestpractices.html', views.HomeView.as_view(), name='Best Practices'),
     path('futureupdates.html', views.FutureUpdates.as_view(), name='Future Updates'),
