@@ -28,12 +28,11 @@
         width: 300px;
         height: 15px;
         padding: 20px 20px 20px 20px;
-        margin-left: 100px;
+        margin-left: 200px;
         border-color: gray;
         border-width: 1px;
         border-radius: 5px;
       }
-
       .global_search_button {
         background-color: lightblue;
         color: gray;
@@ -46,7 +45,6 @@
         border-radius: 5px;
         transition: 250ms;
       }
-
       .global_search_button:hover {
         background-color: lightgray;
         color: black;
@@ -62,12 +60,13 @@
         <ul>
           <li><link rel="stylesheet" href="style.css" /></li>
           <li class="logo" ><img src="x" alt="logo image" /></li>
-          <li class="navbar-button"><a href="index.html">Home </a></li>
-          <li class="navbar-button><a href="bestpractices.html">Best Practices </a></li>
+          {% csrf_token %}
+          <li class="active" method="get"><a href="index.html">Home </a></li>
+          <li><a href="bestpractices.html">Best Practices </a></li>
           <li><a href="about.html">About Us</a></li>            
           <li><a href="futureupdates.html">Future Updates</a></li>
         </ul>
-          <form class="" method="POST" action="{% url 'searchresults' %}">
+      
             {% csrf_token %}
             <input
               class="global_search"
