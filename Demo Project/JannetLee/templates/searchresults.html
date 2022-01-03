@@ -154,7 +154,14 @@
       <a class="article-content" href="{% url 'articlepage' article.pk %}">
         <li class="cards-item">
           <div class="card">
-            <div class="card-image"><img src="#" alt="post-pic-here" /></div>
+            <div class="card-image">
+              <img
+                src="{{article.image.url}}"
+                alt="post-pic-here"
+                width="612"
+                height="408"
+              />
+            </div>
             <div class="card-content">
               <h2 class="card-title">{{ article }}</h2>
             </div>
@@ -178,5 +185,4 @@
   {% endif %}
 </body>
 
-{% include 'footer.html' %}
-{% endblock %}
+{% include 'footer.html' %} {% endblock %}
